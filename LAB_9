@@ -1,0 +1,58 @@
+Write a program to check whether a number is Palindrome or not
+
+ Palindrome Number:
+Same number after reverse.
+Example: 121, 1331
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int num, original, remainder, reverse = 0;
+
+        Console.Write("Enter a number: ");
+        num = Convert.ToInt32(Console.ReadLine());
+
+        original = num;
+
+        while (num > 0)
+        {
+            remainder = num % 10;
+            reverse = reverse * 10 + remainder;
+            num = num / 10;
+        }
+
+        if (original == reverse)
+            Console.WriteLine("Number is Palindrome");
+        else
+            Console.WriteLine("Number is Not Palindrome");
+    }
+}
+
+Write a program to check whether a string is Palindrome or not
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string str, reverse = "";
+
+        Console.Write("Enter a string: ");
+        str = Console.ReadLine();
+
+        for (int i = str.Length - 1; i >= 0; i--)
+        {
+            reverse += str[i];
+        }
+
+        if (str.Equals(reverse, StringComparison.OrdinalIgnoreCase))
+            Console.WriteLine("String is Palindrome");
+        else
+            Console.WriteLine("String is Not Palindrome");
+    }
+}
