@@ -1,0 +1,74 @@
+Definition + Program
+Definition:
+
+This program takes radius as input and calculates the area of circle using formula:
+
+𝐴𝑟𝑒𝑎=𝜋𝑟2Area=πr2
+C# Program
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        double radius, area;
+
+        Console.Write("Enter radius: ");
+        radius = Convert.ToDouble(Console.ReadLine());
+
+        area = Math.PI * radius * radius;
+
+        Console.WriteLine("Area of Circle = " + area);
+    }
+}
+Definition + Program
+ Definition:
+
+This program takes a number as input and checks whether it is Even or Odd using modulus operator %.
+ C# Program
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int num;
+
+        Console.Write("Enter a number: ");
+        num = Convert.ToInt32(Console.ReadLine());
+
+        if (num % 2 == 0)
+            Console.WriteLine("Number is Even");
+        else
+            Console.WriteLine("Number is Odd");
+    }
+}
+ Definition + Program
+ Definition:
+
+This program takes age as input and displays category based on age using if-else if condition.
+
+ C# Program
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int age;
+
+        Console.Write("Enter age: ");
+        age = Convert.ToInt32(Console.ReadLine());
+
+        if (age < 12)
+            Console.WriteLine("You are Kid");
+        else if (age >= 12 && age <= 17)
+            Console.WriteLine("You are Teenager");
+        else if (age >= 18 && age <= 60)
+            Console.WriteLine("You are Adult");
+        else
+            Console.WriteLine("You are Senior Citizen");
+    }
+}
+
+
