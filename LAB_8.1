@@ -1,0 +1,56 @@
+Enter Password: hello
+Password must be at least 8 characters long.
+
+Enter Password: helloworld
+Password must contain at least 1 Uppercase letter and 1 Digit.
+
+Enter Password: Hello123
+Password Accepted 
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string password;
+        bool isValid = false;
+
+        while (!isValid)
+        {
+            Console.Write("Enter Password: ");
+            password = Console.ReadLine();
+
+            bool hasUpper = false;
+            bool hasDigit = false;
+
+            if (password.Length >= 8)
+            {
+                foreach (char ch in password)
+                {
+                    if (char.IsUpper(ch))
+                        hasUpper = true;
+
+                    if (char.IsDigit(ch))
+                        hasDigit = true;
+                }
+
+                if (hasUpper && hasDigit)
+                {
+                    isValid = true;
+                    Console.WriteLine("Password Accepted ✅");
+                }
+                else
+                {
+                    Console.WriteLine("Password must contain at least 1 Uppercase letter and 1 Digit.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Password must be at least 8 characters long.");
+            }
+        }
+    }
+}
+
+
+
