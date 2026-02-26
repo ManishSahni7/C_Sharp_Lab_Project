@@ -1,0 +1,93 @@
+Write a Program to Find Factorial of Given Number
+
+
+
+n! = n × (n-1) × (n-2) × ... × 1
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int num;
+        long factorial = 1;
+
+        Console.Write("Enter a number: ");
+        num = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= num; i++)
+        {
+            factorial = factorial * i;
+        }
+
+        Console.WriteLine("Factorial = " + factorial);
+    }
+}
+
+Write a Program to Print Fibonacci Series up to N
+
+ Example:
+0 1 1 2 3 5 8 13 ...
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n, first = 0, second = 1, next;
+
+        Console.Write("Enter number of terms: ");
+        n = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Fibonacci Series:");
+
+        for (int i = 1; i <= n; i++)
+        {
+            Console.Write(first + " ");
+            next = first + second;
+            first = second;
+            second = next;
+        }
+    }
+}
+
+Write a Program to Check Prime Number
+
+ Prime Number:
+Number divisible only by 1 and itself.
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int num;
+        bool isPrime = true;
+
+        Console.Write("Enter a number: ");
+        num = Convert.ToInt32(Console.ReadLine());
+
+        if (num <= 1)
+            isPrime = false;
+        else
+        {
+            for (int i = 2; i <= num / 2; i++)
+            {
+                if (num % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime)
+            Console.WriteLine("Number is Prime");
+        else
+            Console.WriteLine("Number is Not Prime");
+    }
+}
+
+
