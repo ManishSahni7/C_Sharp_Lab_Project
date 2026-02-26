@@ -1,0 +1,54 @@
+ Program to Calculate Compound Interest Formula:𝐶𝐼=𝑃1+𝑅100)𝑇−𝑃CI=P(1+100R	​)T−PWhere:P = PrincipalR = RateT = Time (Years)
+
+ C# Program
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        double P, R, T, CI, Amount;
+
+        Console.Write("Enter Principal Amount: ");
+        P = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter Rate of Interest: ");
+        R = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter Time (in years): ");
+        T = Convert.ToDouble(Console.ReadLine());
+
+        Amount = P * Math.Pow((1 + R / 100), T);
+        CI = Amount - P;
+
+        Console.WriteLine("Compound Interest = " + CI);
+    }
+}
+Important for Viva:
+
+Math.Pow() → Power calculate karta hai
+
+double → Decimal values ke liye
+
+Convert.ToDouble() → Input ko decimal me convert karta hai
+
+ Program to Calculate Area of Circle
+ Formula:
+𝐴𝑟𝑒𝑎=𝜋𝑟2 Area=πr2
+C# Program
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        double radius, area;
+
+        Console.Write("Enter radius of circle: ");
+        radius = Convert.ToDouble(Console.ReadLine());
+
+        area = Math.PI * radius * radius;
+
+        Console.WriteLine("Area of Circle = " + area);
+    }
+}
