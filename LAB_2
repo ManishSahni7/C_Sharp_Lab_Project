@@ -1,0 +1,60 @@
+ Unit – 1
+Installation of C#
+ What is C#?
+
+C# is a programming language developed by Microsoft.
+It is used to develop Windows apps, web apps, games, and software.
+
+Hindi:
+C# ek programming language hai jo Microsoft ne banayi hai.
+
+ Steps to Install C#
+ Step 1: Install Visual Studio
+
+Download and install Visual Studio from official Microsoft website.
+
+ Choose:
+ .NET Desktop Development
+C# Support
+
+ Step 2: Create New Project
+
+Open Visual Studio
+
+Click → Create New Project
+
+Select → Console App (.NET)
+
+Click → Next
+
+Give Project Name
+
+Click → Create
+
+ Step 3: Run the Program
+
+Click  Run button
+OR press Ctrl + F5
+
+Unit – 2
+Write a Program to Print “Hello World”
+C# Program
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World");
+    }
+}
+ Explanation (Very Important for Viva)
+
+using System; → System library use karta hai
+
+class Program → Class define karta hai
+
+Main() → Program yahin se start hota hai
+
+Console.WriteLine() → Output print karta hai
+
