@@ -1,0 +1,15 @@
+using System;
+
+class Program
+{
+    static int Square(int n)
+    {
+        return n * n;
+    }
+
+    static void Main()
+    {
+        int result = Square(5);
+        Console.WriteLine("Square = " + result);
+    }
+}
