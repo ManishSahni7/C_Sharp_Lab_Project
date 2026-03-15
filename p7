@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Add()
+    {
+        int a = 10;
+        int b = 5;
+        int c = a + b;
+        Console.WriteLine("Sum = " + c);
+    }
+
+    static void Main()
+    {
+        Add();
+    }
+}
