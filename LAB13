@@ -1,0 +1,22 @@
+using System;
+
+class Rectangle
+{
+    double length, width;
+
+    public Rectangle() { length = width = 0; }
+    public Rectangle(double l, double w) { length = l; width = w; }
+
+    public double Area() => length * width;
+
+    public void Display() => Console.WriteLine($"Length: {length}, Width: {width}, Area: {Area()}");
+}
+
+class Program
+{
+    static void Main()
+    {
+        new Rectangle().Display();
+        new Rectangle(5.5, 3.2).Display();
+    }
+}
