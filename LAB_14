@@ -1,0 +1,29 @@
+class student;
+string name;
+int main;
+public student(){
+rollno = 0;
+name = "tejas";
+mark = 0;
+}
+public student(int r,string n,int mr){
+rollno = r;
+name = n;
+mark = mr
+}
+public string grade(){
+switch()
+ifelse()
+
+return satement;
+}
+public void display(){
+display roll;
+mark;
+name;
+grade();
+public static void main(string args[]){
+student s1 = new student();
+s1.display();
+student s2 = new student(1,'abc',100);
+s2.display;
