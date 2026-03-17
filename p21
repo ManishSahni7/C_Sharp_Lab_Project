@@ -1,0 +1,61 @@
+using System;
+
+class Student
+{
+    int rollNo;
+    string name;
+    double marks;
+
+    // Default Constructor
+    public Student()
+    {
+        rollNo = 0;
+        name = "Unknown";
+        marks = 0;
+    }
+
+    // Parameterized Constructor
+    public Student(int r, string n, double m)
+    {
+        rollNo = r;
+        name = n;
+        marks = m;
+    }
+
+    // Method to calculate grade
+    public string CalculateGrade()
+    {
+        if (marks >= 90)
+            return "A";
+        else if (marks >= 75)
+            return "B";
+        else if (marks >= 60)
+            return "C";
+        else if (marks >= 50)
+            return "D";
+        else
+            return "F";
+    }
+
+    // Method to display student details
+    public void DisplayDetails()
+    {
+        Console.WriteLine("Roll No: " + rollNo);
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Marks: " + marks);
+        Console.WriteLine("Grade: " + CalculateGrade());
+    }
+
+    static void Main(string[] args)
+    {
+        // Using default constructor
+        Student s1 = new Student();
+        s1.DisplayDetails();
+
+        Console.WriteLine();
+
+        // Using parameterized constructor
+        Student s2 = new Student(101, "Rahul", 82);
+        s2.DisplayDetails();
+    }
+}
