@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    void Add(int a, int b)   // Method
+    {
+        int c = a + b;
+        Console.WriteLine("Sum = " + c);
+    }
+
+    static void Main(string[] args)
+    {
+        Program obj = new Program();  // Object
+
+        obj.Add(5, 3);   // Method Call
+    }
+}
