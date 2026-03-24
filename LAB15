@@ -1,0 +1,94 @@
+using System;
+
+class Account
+{
+    public int accountNo;
+    public double balance;
+
+    public Account(int acc, double bal)
+    {
+        accountNo = acc;
+        balance = bal;
+    }
+
+    public virtual void deposit(double amount)
+    {
+        balance += amount;
+        Console.WriteLine("Deposited: " + amount);
+    }
+
+    public virtual void withdraw(double amount)
+    {
+        if (amount <= balance)
+        {
+            balance -= amount;
+            Console.WriteLine("Withdrawn: " + amount);
+        }
+        else
+        {
+            Console.WriteLine("Insufficient Balance");
+        }
+    }
+
+    public void display()
+    {
+        Console.WriteLine("Account No: " + accountNo);
+        Console.WriteLine("Balance: " + balance);
+    }
+}
+
+class Savings : Account
+{
+    public double interestRate;
+
+    public Savings(int acc, double bal, double rate) : base(acc, bal)
+    {
+        interestRate = rate;
+    }
+
+    public override void deposit(double amount)
+    {
+        double interest = amount * interestRate / 100;
+        balance += amount + interest;
+        Console.WriteLine("Deposit with Interest: " + (amount + interest));
+    }
+}
+
+class Current : Account
+{
+    public double overdraftLimit;
+
+    public Current(int acc, double bal, double limit) : base(acc, bal)
+    {
+        overdraftLimit = limit;
+    }
+
+    public override void withdraw(double amount)
+    {
+        if (amount <= balance + overdraftLimit)
+        {
+            balance -= amount;
+            Console.WriteLine("Withdraw with Overdraft: " + amount);
+        }
+        else
+        {
+            Console.WriteLine("Overdraft Limit Exceeded");
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Savings s = new Savings(101, 5000, 5);
+        s.deposit(1000);
+        s.display();
+
+        Console.WriteLine();
+
+        Current c = new Current(102, 3000, 2000);
+        c.withdraw(4000);
+        c.display();
+    }
+}
