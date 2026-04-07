@@ -1,0 +1,6 @@
+try:
+    x = int("5")
+except ValueError:
+    print("Error")
+else:
+    print("No error, value is:", x)
