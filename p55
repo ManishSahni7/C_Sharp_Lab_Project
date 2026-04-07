@@ -1,0 +1,6 @@
+try:
+    f = open("test.txt", "r")
+except FileNotFoundError:
+    print("File missing")
+finally:
+    print("Execution completed")
